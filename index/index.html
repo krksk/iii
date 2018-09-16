@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>바람의 나라</title>
+	<style>
+	#transBut{width: 200px; height: 40px; text-align: center; line-height: 40px; margin:auto; margin-top: 700px; margin-left: 480px;background: red; border:3px solid black; border-radius: 10px;}
+	#baram{width: 600px; position: absolute; left: 100px; top:100px; margin:auto; margin-left: 200px;}
+</style>
+</head>
+<body>
+	<div id="transBut">로그인!</div>
+	<img src="main.jpg" id="baram">
+	<audio id="testMusic">
+	<source src="Title.mp3" type="audio/mpeg">
+	<source src="Guknaeseong.mp3" type="audio/mpeg">
+	<source src="Buyeoseong.mp3" type="audio/mpeg">
+	</audio>
+		<script type="text/javascript">
+
+		var toggle = "off"
+		testMusic.play();
+
+		transBut.onclick = function(){
+			if(toggle == "off"){
+			baram.setAttribute("src","baram1.jpg")
+			testMusic.setAttribute("src","Guknaeseong.mp3")
+			toggle = "on";
+			testMusic.play();
+			transBut.innerHTML = "다음 맵으로";
+			transBut.style.background = "yellow";
+		}	else {
+			baram.setAttribute("src","baram3.jpg")
+			testMusic.setAttribute("src","Buyeoseong.mp3")
+			toggle = "off";
+			testMusic.play();
+			}
+		}
+	</script>
+</body>
+</html>
